@@ -19,6 +19,8 @@ ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 
 RUN bundle update --bundler
 
+RUN sudo gem install pg --with-pg-config=/path/to/pg_config
+
 #Gemfileのbundle installを実行
 RUN bundle install
 ADD . $APP_ROOT
