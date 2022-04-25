@@ -40,7 +40,6 @@ jobs:
     - run:
         name: Databasesetup
         command: |
-          sudo service mysql start
           bundle exec rake db:create
           bundle exec rake db:schema:load
 
