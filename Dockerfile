@@ -6,10 +6,12 @@ RUN apt-get update -qq && \
     libpq-dev \        
     nodejs           
 #作業ディレクトリの作成
-RUN mkdir /sample_app  #自身のアプリディレクトリ名を設定
+RUN mkdir /sample_app  
+#自身のアプリディレクトリ名を設定
 
 #作業ディレクトリをAPP_ROOTに割り当てる
-ENV APP_ROOT /sample_app  #自身のアプリディレクトリ名を設定 
+ENV APP_ROOT /sample_app  
+#自身のアプリディレクトリ名を設定 
 WORKDIR $APP_ROOT
 
 #ローカルのGemfileを追加
