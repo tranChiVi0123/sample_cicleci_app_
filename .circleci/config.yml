@@ -7,7 +7,6 @@ jobs:
           - BUNDLER_VERSION: 2.0.2
           - RAILS_ENV: "test"
       - image: circleci/mysql:5.7
-        command: mysqld --innodb-large-prefix=1 --innodb-file-format=barracuda --innodb-file-per-table=1 --character-set-server=utf8mb4 --collation-server=utf8mb4_bin --init-connect='SET NAMES utf8mb4; SET CHARACTER SET utf8mb4;'
         environment:
           - MYSQL_ALLOW_EMPTY_PASSWORD: "true"
           - MYSQL_ROOT_HOST: "127.0.0.1"
