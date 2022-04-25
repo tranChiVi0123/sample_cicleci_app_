@@ -26,7 +26,6 @@ jobs:
           name: install dependencies
           command: |
             gem install bundler -v 2.0.2
-            sudo gem install pg --with-pg-config=/path/to/pg_config
             bundle install --jobs=4 --retry=3 --path vendor/bundle
 
       - save_cache:
